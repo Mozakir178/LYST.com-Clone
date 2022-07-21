@@ -2,24 +2,25 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
 }
 #first{
     border: 1px solid black; 
     margin-bottom: 75px;
+    height: 500px;
 }
 #firstimg{
     width: 100%;
     max-height:100%;
-    /* font: inherit; */
 }
 
-#container1,#container2{
+/* #container1,#container2{
     display: flex;
-    /* background-color: rgb(145, 105, 105); */
-    /* border:1px solid black; */
     overflow: scroll;
     scroll-snap-type: none;
-}
+} */
 .h3div{
     height: 300px;
     overflow: hidden;
@@ -52,5 +53,106 @@ body{
     height: 300px;
     width: 300px;
     object-fit: cover;
-    /* visibility: visible; */
+}
+.parent{
+    overflow-x: hidden; 
+    float:left;
+}
+.container1{
+    width:1345px;
+    /* width: 100%; */
+    float:left;
+    font-size:15px;
+    font-family:arial;
+    cursor: pointer;
+    display: flex;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 100px;  */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .floating{
+      /* border: 1px solid red; */
+      height: 110px;
+      width: 110px;
+      margin: auto;
+      padding: 9px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  #qr{
+    width: 100%;
+  }
+._19NYv {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .01em;
+    line-height: 20px;
+    margin-top: 36px;
+    text-align: center;
+}
+
+._3goM0 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    max-width: 350px;
+}
+._1WzqZ {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+._1WzqZ, ._3goM0 {
+    display: block;
+    font-style: normal;
+    margin: 12px auto auto;
+    text-align: center;
+}
+._3LzdR {
+    bottom: 0;
+    display: block;
+    height: 300px;
+    left: 10%;
+    /* position: absolute; */
+    width: 294px;
+    margin: auto;
+    /* padding-bottom: 7px; */
 }
