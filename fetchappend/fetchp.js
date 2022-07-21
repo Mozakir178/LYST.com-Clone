@@ -10,13 +10,23 @@ const getData = async(url)=>{
     }
 }
 
-export {getData};
+
 const appendData = (data,bmain)=>{
     bmain.innerHTML = null;
     data.forEach((ele)=>{
         let div = document.createElement("div");
        
         let img = document.createElement("img");
-        
+        img.src = ele.image;
+
+        let Title = document.createElement("h4");
+        Title.innerText = ele.title;
+
+        let Detail = document.createElement("p");
+        Detail.innerText = ele.detail;
+
+        div.append(img,Title,Detail);
+        bmain.append(div);
     })
 }
+export {getData, appendData}
