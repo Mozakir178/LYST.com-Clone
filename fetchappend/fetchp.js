@@ -11,9 +11,12 @@ const getData = async(url)=>{
 }
 
 export {getData};
-// const appendData = (data,bmain)=>{
-//     bmain.innerHTML = null;
-//     data.forEach((ele)=>{
-//         let 
-//     })
-// }
+const appendData = (data,bmain)=>{
+    bmain.innerHTML = null;
+    data.forEach((ele)=>{
+        let div = document.createElement("div");
+       
+        let img = document.createElement("img");
+        
+    })
+}
