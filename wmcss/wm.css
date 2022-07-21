@@ -1,6 +1,6 @@
 #toptxt{
     padding-left: 10px;
-    height: 160px;
+    height: 180px;
     width: 80%;
     border: 1px solid black;
     margin: auto;
@@ -16,7 +16,7 @@
     margin-bottom: 3px;
 }
 #toptxt>div{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
