@@ -1,0 +1,27 @@
+#toptxt{
+    padding-left: 10px;
+    height: 160px;
+    width: 80%;
+    border: 1px solid black;
+    margin: auto;
+   
+}
+#toptxt>h4{
+    
+    color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#toptxt>div>img{
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+#toptxt>div{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#toptxt>div:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
