@@ -19,4 +19,12 @@
 </body>
 </html>
 
+<script type="module">
+    let bmain = document.getElementById("brows");
+
+    import {getData} from "../fetchappend/fetchp.js";
+
+    let resp = await getData("./myData/brows.json");
+    console.log("respfrommodule",resp)
+</script>
 <script></script>
