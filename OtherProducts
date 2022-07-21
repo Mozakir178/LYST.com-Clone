@@ -146,142 +146,170 @@ let womens = [{
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/1f/P00709974.jpg",
     name: "LORO PIANA",
     price: 585,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/5d/P00710025.jpg",
     name: "LORO PIANA",
     price: 1095,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00712412.jpg",
     name: "LORO PIANA",
     price: 499,
+    cat : "Accessories"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00712412.jpg",
     name: "LORO PIANA",
     price: 1555,
+    cat : "Accessories"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e0/P00709999.jpg",
     name: "LORO PIANA",
-    price: 1095
+    price: 1095 ,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a4/P00712474.jpg",
     name: "LORO PIANA",
     price: 499,
+    cat : "Accessories"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a7/P00712480.jpg",
     name: "LORO PIANA",
     price: 1099,
+    cat : "Bags"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/35/P00709970.jpg",
     name: "LORO PIANA",
     price: 1429,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8c/P00709981.jpg",
     name: "LORO PIANA",
     price: 585,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00709993.jpg",
     name: "LORO PIANA",
     price: 795,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2d/P00709954.jpg",
     name: "LORO PIANA",
     price: 1429,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7d/P00712487.jpg",
     name: "LORO PIANA",
     price: 415,
+    cat : "Accessories"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ec/P00710001.jpg",
     name: "LORO PIANA",
     price: 1095,
+    cat : "clothing"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/26/P00709987.jpg",
     name: "LORO PIANA",
     price: 1095,
+    cat : "clothing"
 } ,
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/e3/P00695569.jpg",
     name: "CHLOÉ",
     price: 499,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7a/P00660826.jpg",
     name: "CHLOÉ",
     price: 499,
+    cat : "Shoes"
 },
 
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/00/P00695572.jpg",
     name: "VALENTINO GARAVANI",
     price: 655,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/17/P00641771.jpg",
     name: "VALENTINO GARAVANI",
     price: 585,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/7e/P00665044.jpg",
     name: "AQUAZZURA",
     price: 505,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/2c/P00665056.jpg",
     name: "AQUAZZURA",
     price: 505,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/18/P00703196.jpg",
     name: "ISABEL MARANT",
     price: 335,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/63/P00703194.jpg",
     name: "ISABEL MARANT",
     price: 335,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/93/P00695598.jpg",
     name: "CHLOÉ",
     price: 315,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ce/P00695579.jpg",
     name: "CHLOÉ",
     price: 315,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a3/P00698515.jpg",
     name: "ALAIA",
     price: 549,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/61/P00704433.jpg",
     name: "THE ATTICO",
     price: 535,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00704434.jpg",
     name: "THE ATTICO",
     price: 535,
+    cat : "Shoes"
 },
 {
     image: "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/45/P00709107.jpg",
     name: "GANNI",
     price: 275,
+    cat : "Shoes"
 }
 
 ]
