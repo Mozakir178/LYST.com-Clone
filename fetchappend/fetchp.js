@@ -13,5 +13,7 @@ const getData = async(url)=>{
 export {getData};
 // const appendData = (data,bmain)=>{
 //     bmain.innerHTML = null;
-//     data.forEach
+//     data.forEach((ele)=>{
+//         let 
+//     })
 // }
