@@ -1,7 +1,7 @@
 #toptxt{
     padding-left: 10px;
     height: 180px;
-    width: 80%;
+    width: 70%;
     border: 1px solid black;
     margin: auto;
    
@@ -26,14 +26,15 @@
 
 }
 #brows{
-    width: 80%;
+    width: 70%;
     border: 1px solid red;
     margin: auto;
+    display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 #brows>div{
-    height: 300px;
+    height: 400px;
     border: 1px solid black;
 }
 #brows>div>img{

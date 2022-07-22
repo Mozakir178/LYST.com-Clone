@@ -5,7 +5,7 @@ const getData = async(url)=>{
         let data =await  res.json();
         let Data=data.BrowswAndShop
         console.log(Data);
-         appendData(Data);
+         return Data;
     }
     catch(err){
         console.log("err",err);
@@ -15,7 +15,7 @@ const getData = async(url)=>{
 
 const appendData = (Data,bmain)=>{
     bmain.innerHTML = null;
-    data.forEach((ele)=>{
+    Data.forEach((ele)=>{
         let div = document.createElement("div");
        
         let img = document.createElement("img");

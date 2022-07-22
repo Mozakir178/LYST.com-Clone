@@ -22,9 +22,10 @@
 <script type="module">
     let bmain = document.getElementById("brows");
 
-    import {getData} from "../fetchappend/fetchp.js";
+    import {getData,appendData} from "../fetchappend/fetchp.js";
 
     let resp = await getData("./myData/brows.json");
+    appendData(resp, bmain);
     // console.log("respfrommodule",resp)
 </script>
 <script></script>
