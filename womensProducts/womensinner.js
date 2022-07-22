@@ -344,7 +344,38 @@ let kidsdata = [{
     color: "Multicolor"
 }
 
-]
+]  ;
+
+let mensShart = "" ;
+let mensTshart = "" ;
+let mensWatch = "" ;
+let sunglasses  = "" ;
+let womensJewelary = "" ;
+let womensShoes = "" ;
+let womensDresses = "";
+let womensWatch = "" ;
+let womensBags = "" ;
+
+fetch("./data.json")
+.then(res => res.json())
+.then(data => {console.log(data) ;
+
+
+ mensShart = data.mensshirt ;
+//  console.log(mensShart);
+ mensTshart =data.menstshart;
+ mensWatch = data.menswatch ;
+ sunglasses  = data.sunglasses ;
+ womensJewelary = data.womensjewelery ;
+ womensShoes = data.womensshoes ;
+ womensDresses = data.womensdress;
+ womensWatch = data.womenswatch;
+ womensBags = data.womensbags ;
+//  console.log( mensShart,mensTshart , mensWatch , sunglasses , womensBags , womensDresses , womensJewelary , womensShoes , womensWatch , );
+}
+
+)
+
 var kidsarr = JSON.parse(localStorage.getItem("cartdetail")) || []
 document.querySelector("#filter").addEventListener("change", priceFilter)
 priceFilter(kidsdata)
@@ -417,6 +448,9 @@ function disptable(k) {
             addall(el)
         })
         div.append(avtar, p1, p2, h4, btn)
+        div.onclick =() =>{
+            console.log(div);
+        }
         document.getElementById("right_Section").append(div)
     })
     //  function changeimage(kidsdata,index){
@@ -460,10 +494,10 @@ for (let i = 0; i < h3.length; i++) {
                         // selected[i].value = true ;
                         let filter = li[i].innerText.toUpperCase();
                         let fil = kidsdata.filter((el) => {
-                            console.log(el.cat);
+                            // console.log(el.cat);
                             return el.cat.toUpperCase() === filter
                         })
-                        console.log(fil);
+                        // console.log(fil);
                         disptable(fil)
                         productlength.innerText = fil.length +" Products" ;
                     })
@@ -478,11 +512,11 @@ for (let i = 0; i < h3.length; i++) {
                         // selected[i].value = true ;
                         let filter = li[i].innerText.toUpperCase();
                         let fil = kidsdata.filter((el) => {
-                            console.log("OK" + el.color.toUpperCase() === filter);
-                            console.log(filter);
+                            // console.log("OK" + el.color.toUpperCase() === filter);
+                            // console.log(filter);
                             return "OK" + el.color.toUpperCase() === filter
                         })
-                        console.log(fil);
+                        // console.log(fil);
                         disptable(fil)
                         productlength.innerText = fil.length +" Products" ;
                     })
@@ -497,12 +531,12 @@ for (let i = 0; i < h3.length; i++) {
                         // selected[i].value = true ;
                         let filter = li[i].innerText.toUpperCase();
                         let fil = kidsdata.filter((el) => {
-                            console.log(el.price);
-                            console.log(li[i].value);
-                            console.log(Number(li[i].value) < el.price);
+                            // console.log(el.price);
+                            // console.log(li[i].value);
+                            // console.log(Number(li[i].value) < el.price);
                             return Number(el.price) > Number(li[i].value) ;
                         })
-                        console.log(fil);
+                        // console.log(fil);
                         disptable(fil)
                         productlength.innerText = fil.length +" Products" ;
                     })
@@ -514,12 +548,12 @@ for (let i = 0; i < h3.length; i++) {
               for (let i = 0; i < li.length; i++) {
                     li[i].addEventListener("click", function () {
                         let fil = kidsdata.filter((el) => {
-                           console.log(li[i].innerText);
+                        //    console.log(li[i].innerText);
                           if(li[i].innerText ==="Women's"){
                             return el
                           }
                         })
-                        console.log(fil);
+                        // console.log(fil);
                         disptable(fil)
                         productlength.innerText = fil.length +" Products" ;
                     })
@@ -540,5 +574,14 @@ for (let i = 0; i < h3.length; i++) {
 document.getElementById('clear').addEventListener("click" , clear)
 function clear(){
     disptable(kidsdata)
+    console.log( mensShart,mensTshart , mensWatch , sunglasses , womensBags , womensDresses , womensJewelary , womensShoes , womensWatch , );
+
    
 }
+
+// let abc = require("./data.json")
+// console.log(abc);
+
+
+
+
