@@ -124,6 +124,7 @@
 #arrange>div:hover{
     cursor: pointer;
     text-decoration: underline;
+    background-color: white;
 }
 #nxttxt{
     display: grid;
@@ -139,6 +140,7 @@
 #nxttxt>div>p:hover{
     text-decoration: underline;
     cursor: pointer;
+    background-color: white;
 }
 /* #shopBtn{
     padding: 0.4rem 0.5rem;
@@ -180,3 +182,4 @@
     padding: 10px;
     border: 1px solid black;
 }
+
