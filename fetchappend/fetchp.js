@@ -4,10 +4,7 @@ const getData = async(url)=>{
         let res = await fetch(url);
         let data =await  res.json();
         let Data=data.BrowswAndShop 
-        if(!Data){
-            Data = data.Trendinspire
-        }
-        console.log(Data);
+        
          return Data;
     }
     catch(err){
@@ -24,11 +21,11 @@ const appendData = (Data,bmain)=>{
         let img = document.createElement("img");
         img.src = ele.image;
 
-        let Title = document.createElement("p");
+        let Title = document.createElement("div");
         Title.innerText = ele.title;
         Title.setAttribute('class','productTitle')
 
-        let Detail = document.createElement("p");
+        let Detail = document.createElement("div");
         Detail.innerText = ele.detail;
         Detail.setAttribute("class",'productDetail')
 
@@ -49,11 +46,11 @@ const appendTrending = (Data,trending)=>{
         let img = document.createElement("img");
         img.src = ele.image;
 
-        let Title = document.createElement("p");
+        let Title = document.createElement("div");
         Title.innerText = ele.title;
         Title.setAttribute('class','productTitle')
 
-        let Detail = document.createElement("p");
+        let Detail = document.createElement("div");
         Detail.innerText = ele.detail;
         Detail.setAttribute("class",'productDetail')
 

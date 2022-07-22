@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <link rel="stylesheet" href="wmcss/wm.css">
 </head>
 <body>
@@ -25,11 +26,25 @@
 
         
         <div>
-            <h2 class="browseAndShop" >Trending & Insipre</h2>
+            <h2 class="browseAndShop" >Trend to Insipre</h2>
         </div>
         <div id="trendingInspire"></div>
 
 
+    </div>
+    <div id="bottext">
+        <div id="arrange">
+            <div>Clothing</div>
+            <div> Shoes</div>
+            <div>Accessories</div>
+            <div>Bags</div>
+            <div>Jewelry</div>
+            <div>Home</div>
+        </div>
+        <div id="nxttxt">
+            
+            </div>
+        </div>
     </div>
 </body>
 </html>
@@ -39,13 +54,19 @@
     let trending = document.getElementById("trendingInspire")
 
 
-    import {getData,appendData,appendTrending} from "../fetchappend/fetchp.js";
+    import {getData,appendData} from "../fetchappend/fetchp.js";
 
     let resp = await getData("./myData/brows.json");
     appendData(resp, bmain);
 
-    let respTrending = await getData("./myData/trendinspire.json")
-    appendTrending(respTrending, trending);
-    // console.log("respfrommodule",resp)
+    // let respTrending = await getData("./myData/trendinspire.json")
+    // appendTrending(respTrending, trending);
+    // // console.log("respfrommodule",resp)
 </script>
-<script></script>
+<script src="./scripts/women.js"></script>
+<script>
+    let curr = 0 ;
+if(curr==0){
+    getTrending("./myData/trendinspire.json")
+}   
+</script>

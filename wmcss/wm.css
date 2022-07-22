@@ -1,4 +1,7 @@
-
+/* // font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif; */
+*{
+    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
 #toptxt{
     padding-left: 20px;
     height: 180px;
@@ -35,7 +38,7 @@
 }
 .browseAndShop{
    align-self: center;
-   margin:1.7rem 40%;
+   margin:1.7rem 38%;
    margin-top: 1.7rem;
    padding-top: 1.7rem;
 
@@ -49,9 +52,11 @@
     grid-gap: 20px;
 }
 #brows>div{
+    /* height: 400px; */
     border: 1px solid black;
     box-sizing: border-box;
     background-color: white;
+    cursor: pointer;
 }
 #brows>div>img{
     width: 100%;
@@ -62,15 +67,22 @@
     margin-bottom: -0rem;
     background-color: white;
     border: none;
+    margin-top: 8px;
 }
 .productDetail{
+    height: 50px;
+    border: 1px solid red;
     color: grey;
-    margin-top:-1rem;
     font-size: 14px;
+    overflow: hidden;
+    margin-top: 5px;
 }
 .productTitle{
+    height: 55px;
+    border: 1px solid red;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 20px;
+    overflow: hidden;
 }
 
 #trendingInspire{
@@ -85,23 +97,46 @@
     border: 1px solid black;
     box-sizing: border-box;
     background-color: white;
+    cursor: pointer;
 }
 #trendingInspire>div>img{
     width: 100%;
     height: 60%;
 }
-#shopBtn{
+#bottext{
+    height: auto;
+    width: 70%;
+    border: 1px solid black;
+    margin: auto;
+    
+}
+
+#arrange{
+    font-weight: 800;
+    display: flex;
+    justify-content: space-around;
+}
+#arrange>div:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#nxttext{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 1px solid green;
+}
+/* #shopBtn{
     padding: 0.4rem 0.5rem;
-    margin-bottom: -0rem;
+    margin-bottom: 0.8rem;
     background-color: white;
     border: none;
-}
-.productDetail{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    
+} */
+/* .productDetail{
+    overflow: hidden;
     color: grey;
     margin-top:-1rem;
     font-size: 14px;
-}
-.productTitle{
-    font-weight: 900;
-    font-size: 24px;
-}
+} */
