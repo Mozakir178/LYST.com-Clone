@@ -120,10 +120,20 @@
     cursor: pointer;
     text-decoration: underline;
 }
-#nxttext{
+#nxttxt{
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(4,1fr);
-    border: 1px solid green;
+    border: 1px solid blue;
+}
+#nxttxt>div{
+
+    line-height: 2px;
+    border: 1px solid red;
+}
+#nxttxt>div>p:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 /* #shopBtn{
     padding: 0.4rem 0.5rem;
@@ -140,3 +150,20 @@
     margin-top:-1rem;
     font-size: 14px;
 } */
+.nextPrevDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+#prevBtn{
+    border: none;
+}
+#prevBtn:hover{
+    border: 1px solid black;
+}
+#nextBtn{
+    border: none;
+}
+#nextBtn:hover{
+    border: 1px solid black;
+}

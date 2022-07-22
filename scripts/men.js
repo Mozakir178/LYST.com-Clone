@@ -36,3 +36,17 @@ let trending = document.getElementById("trendingInspire");
             trending.append(div);
         })
     }
+
+    const getNextData= async (url)=>{
+        try{
+            let res = await fetch(url);
+            let data =await  res.json();
+            let Data=data.Trendinspire
+            Data.splice(0,3)
+            console.log(Data);
+            appendTrending(Data);
+        }
+        catch(err){
+            console.log("err",err);
+        }
+    }

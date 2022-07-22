@@ -30,7 +30,16 @@
         </div>
         <div id="trendingInspire"></div>
 
-
+        <div class="nextPrevDiv">
+            <button onClick="decCurr()" id="prevBtn">
+                <i class="fa-solid fa-angle-left"></i>
+                Prev
+            </button>
+            <button onClick="incCurr()" id="nextBtn">
+                Next 
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+        </div>
     </div>
 </body>
 </html>
@@ -51,7 +60,31 @@
 <script src="./scripts/men.js"></script>
 <script>
     let curr = 0 ;
-if(curr==0){
-    getTrending("./myData/mentrending.json")
-}   
+    if(curr==0){
+      getTrending("./myData/mentrending.json")
+    }
+   
+function incCurr(){
+    if(curr<=1){
+        curr = curr+1
+    }
+    if(curr==1){
+        document.getElementById("trendingInspire").innerHTML = null;
+        console.log('curr',curr)
+       getNextData("./myData/mentrending.json");
+
+    }
+}
+function decCurr(){
+    if(curr==1){
+        curr= curr-1
+    }
+    console.log('curr',curr)
+    if(curr==0){
+        document.getElementById("trendingInspire").innerHTML = null;
+      getTrending("./myData/mentrending.json")
+    }
+}
+
+
 </script>

@@ -29,8 +29,16 @@
             <h2 class="browseAndShop" >Trend to Insipre</h2>
         </div>
         <div id="trendingInspire"></div>
-
-
+        <div class="nextPrevDiv">
+            <button onClick="decCurr()" id="prevBtn">
+                <i class="fa-solid fa-angle-left"></i>
+                Prev
+            </button>
+            <button onClick="incCurr()" id="nextBtn">
+                Next 
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+        </div>
     </div>
     <div id="bottext">
         <div id="arrange">
@@ -42,7 +50,16 @@
             <div>Home</div>
         </div>
         <div id="nxttxt">
-            
+            <div><h4>Jeans</h4>
+                <p>JeansBootcut jeans</p>
+                <p>skinny jeans</p>
+                <p>slim jeans</p>
+                <p>Straight-leg jeans</p>
+                <p>Flare and bell bottom jeans</p>
+            </div>
+            <div><h4>Jackets</h4>
+                <p></p>
+            </div>
             </div>
         </div>
     </div>
@@ -66,7 +83,33 @@
 <script src="./scripts/women.js"></script>
 <script>
     let curr = 0 ;
-if(curr==0){
-    getTrending("./myData/trendinspire.json")
-}   
+    if(curr==0){
+      getTrending("./myData/trendinspire.json")
+    }
+   
+function incCurr(){
+    if(curr<=1){
+        curr = curr+1
+    }
+    if(curr==1){
+        document.getElementById("trendingInspire").innerHTML = null;
+        console.log('curr',curr)
+       getNextData("./myData/trendinspire.json");
+
+    }
+}
+
+function decCurr(){
+    if(curr==1){
+        curr= curr-1
+    }
+    console.log('curr',curr)
+
+    if(curr==0){
+        document.getElementById("trendingInspire").innerHTML = null;
+      getTrending("./myData/trendinspire.json")
+    }
+}
+
+
 </script>
