@@ -2,9 +2,10 @@
 const getData = async(url)=>{
     try{
         let res = await fetch(url);
-        let data = res.json();
-        console.log(data);
-        appendData(data);
+        let data =await  res.json();
+        let Data=data.BrowswAndShop
+        console.log(Data);
+         appendData(Data);
     }
     catch(err){
         console.log("err",err);
@@ -12,7 +13,7 @@ const getData = async(url)=>{
 }
 
 
-const appendData = (data,bmain)=>{
+const appendData = (Data,bmain)=>{
     bmain.innerHTML = null;
     data.forEach((ele)=>{
         let div = document.createElement("div");
