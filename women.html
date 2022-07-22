@@ -1,5 +1,6 @@
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/203d93de14.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +16,36 @@
         <div><img src="https://static.lystit.com/static/n/img/trend-arrows/trend-arrow-rising.9acf608a48a08aeaa8306b1a98bd5ffd.svg" alt="">TOMS Alpargata shoes</div>
 
     </div>
-    <div id="brows"></div>
+
+    <div class="mainBrwseDiv">
+        <div>
+            <h2 class="browseAndShop" >Browse & Shop</h2>
+        </div>
+        <div id="brows"></div>
+
+        
+        <div>
+            <h2 class="browseAndShop" >Trending & Insipre</h2>
+        </div>
+        <div id="trendingInspire"></div>
+
+
+    </div>
 </body>
 </html>
 
 <script type="module">
     let bmain = document.getElementById("brows");
+    let trending = document.getElementById("trendingInspire")
 
-    import {getData,appendData} from "../fetchappend/fetchp.js";
+
+    import {getData,appendData,appendTrending} from "../fetchappend/fetchp.js";
 
     let resp = await getData("./myData/brows.json");
     appendData(resp, bmain);
+
+    let respTrending = await getData("./myData/trendinspire.json")
+    appendTrending(respTrending, trending);
     // console.log("respfrommodule",resp)
 </script>
 <script></script>
