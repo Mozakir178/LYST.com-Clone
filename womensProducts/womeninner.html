@@ -160,6 +160,58 @@
 
     <div id="footer"></div>
 
+
+    <div id="productdetails">
+      <div id="img-cont">
+          <img src="" alt="" id="img">
+      </div>
+      <div id="info">
+          <h3 id="title"></h3>
+          <p id="cat"></p>
+          <p id="price1"></p>
+          <p id="color1"></p>
+          <button id="btn-fixed"> shop now</button>
+      </div>
+      <p id="fixed">
+         X
+      </p>
+  </div>
+  <style>
+    #productdetails{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            width: 60%;
+            margin: auto;
+            position: fixed;
+            left: 20%;
+            bottom: 15%;
+            background-color: white;
+            padding: 30px;
+            display: none;
+        }
+        #productdetails img{
+            width :450px ;
+            height: 500px;
+        }
+        #productdetails div+div>*{
+            margin-bottom: -15px;
+        }
+        #productdetails button{
+            width : 300px ;
+            background-color: black;
+            color: white;
+            height: 40px;
+            margin-top: 30px;
+        }
+        #productdetails #fixed{
+         position: absolute;
+         right: 5% ;
+         top: 5%;
+        }
+  </style>
+<a href="../cart/cart.html">cart</a>
 </body>
 
 </html>
@@ -169,4 +221,18 @@
 
 <script>
    
+</script>
+
+
+<script>
+   let data = JSON.parse(localStorage.getItem("productDetails")) ;
+   console.log(data);
+   
+   let a =document.getElementById('fixed');
+   a.addEventListener("click" , fixed) ;
+   function fixed(){
+      document.getElementById('productdetails').style.display = "none";
+   }
+   
+
 </script>
