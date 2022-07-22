@@ -69,6 +69,10 @@
     border: none;
     margin-top: 8px;
 }
+#shopBtn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 .productDetail{
     height: 50px;
     border: 1px solid red;
@@ -104,6 +108,7 @@
     height: 60%;
 }
 #bottext{
+    margin-top: -100px;
     height: auto;
     width: 70%;
     border: 1px solid black;
@@ -157,13 +162,21 @@
 }
 #prevBtn{
     border: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 20px;
 }
 #prevBtn:hover{
+    padding: 10px;
     border: 1px solid black;
 }
 #nextBtn{
     border: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 20px;
 }
 #nextBtn:hover{
+    padding: 10px;
     border: 1px solid black;
 }
