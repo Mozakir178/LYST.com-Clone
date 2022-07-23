@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up </title>
+    <script src="https://kit.fontawesome.com/a32cf6c269.js" crossorigin="anonymous"></script>
+    <style>
+        #box {
+            display: flex;
+            /* justify-content: center; */
+            margin: auto;
+            width:58%;
+        }
+        #box1{
+            /* padding: 8px; */
+            width: 51%;
+        }
+        #logo>img {
+            /* display: block; */
+            width: 100%;
+            cursor: pointer;
+
+        }
+        #login_container {
+            padding: 20px;
+            box-shadow: 1px solid #999;
+            /* border: 1px solid; */
+            font-family: roboto;
+            font-family: Ubuntu, sans-serif;
+            letter-spacing: .05em;
+            line-height: 1;
+            /* font-size: 18px; */
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            text-rendering: optimizeSpeed;
+            box-sizing: border-box;
+            /* margin-top: 150px; */
+        }
+
+        label {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: #3c3c37;
+            font-size: 14px;
+           
+        }
+        #heading{
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #heading>label {
+            padding:10px 18px;
+            font-size: 14px;
+            border: 1px solid #3c3c37;
+            text-align: center;
+            /* margin-left: 4px; */
+            /* margin-top: 3px; */
+            font-weight: bold;
+           
+        }
+
+        #heading>div>h3 {
+        color: #000;
+        font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+        margin: 0 0 0.5em;
+        display: block;
+        font-size: 1.4em;
+        /* font-size: 25px; */
+        font-weight: 700;
+        line-height: 1.18;
+        margin-top: 30px;
+        }
+        h3+p{
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(73, 73, 73);
+            margin-bottom: 30px;
+        }
+        #signup{
+            background-color: #000;
+            color: white;
+        }
+
+        #loginForm>label {
+            color: #020202;
+            /* font-weight:bold; */
+
+        }
+
+        .label {
+            margin-top: 3px;
+        }
+
+        #loginForm {
+            width: 98%;
+            margin: auto;
+        }
+
+        #loginForm>input[type="email"],
+        #loginForm>input[type="password"]
+         {
+            width: 100%;
+            height: 45px;
+            padding: 2px 5px;
+            resize: vertical;
+            margin-top: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border: 2px solid #d7bcff;
+            border-radius: 3px;
+
+        }
+
+        #button{
+            margin-top: 30px;
+            width: 94%;
+            border: 2px solid #000;
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+            background-color: #000;
+            font-size: 15px;
+            text-align: center;
+        }
+        #button:hover{
+            font-size: 15px;
+            margin-top: 30px;
+            width: 94%;
+            border: 2px solid #000;
+            padding: 10px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+        }
+        #logo>img {
+            margin: auto;
+            margin-top: 10px;
+            width: 98%;
+        }
+        #logo{
+            text-align: center;
+        }
+        #signup>p {
+            color: #444240;
+            text-align: center;
+            margin-bottom: 70px;  
+        }
+        #main{
+            margin: 6px 0px 2px 0px;
+        }
+        #password {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #signup:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #signin:hover {
+            background-color: black;
+            color: white;
+        }
+        img+p{
+            /* font-family: sans-serif; */
+            color: grey;
+            font-weight: 549;
+        }
+        .hi{
+            text-decoration: none;
+            color: #000;
+        }
+        #box2 {
+            width: 41%;
+            /* border: 1px solid; */
+            /* background-color: #b58ff0; */
+            background-image: url(https://static.lystit.com/static/n/img/encouraged-search/gradient-bg-6-2.deff3c85cca058ba0fe2cc465803e1fa.jpg);
+            padding:35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box3{
+            /* height: 200px; */
+            width: 100%;
+            /* text-align: center; */
+            background-color: white;
+            padding: 20px;
+        }
+        #box3>h2{
+            font-size: 18px;
+            font-family: sans-serif;
+            margin-bottom: -10px;
+        }
+        #box4>label{
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+        #box4>i{
+            margin: 0px 10px 15px 0px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- login -->
+    <div id="box">
+        <div id="box1">
+            <div id="login_container">
+                <div id="heading">
+                    <label id="signup" for=""><a href="signup.html">New to Lyst?</a></label>
+                    <label id="signin" for=""><a href="login.html">Already a member</a></label>
+                   
+                    
+                    <div>
+                        <h3>Search thousands of fashion brands and stores all in one place</h3>
+                        <p>We just need a few details from you first.</p>
+                    </div>
+                </div>
+
+
+                <form id="loginForm">
+                    <label for="">Email address</label><br />
+                    <input id="email" type="email" placeholder="Enter your Email" /><br />
+                    <label for="">Password</label><br />
+                    <input id="password" type="password" placeholder="minimum 8 Characters"/><br />
+                    <input type="checkbox">
+                    <label for="">I would like to hear about products, services, and sales, including personalized email
+                        alerts from Lyst. You can unsubscribe at any time.</label>
+                    <!-- <input type="submit" name="submit" id="submit" value="Create"> -->
+                       <!-- <button id="button">Join Lyst</button> -->
+                    <input id="button" type="submit" value="Join Lyst">   
+
+                </form>
+                <div id="logo">
+                    <!-- <img id="login"
+                        src="https://scontent.fbho2-1.fna.fbcdn.net/v/t1.15752-9/292456529_1191981751587767_1877862207668419040_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=k_PZp3J87S8AX9CZNUd&_nc_ht=scontent.fbho2-1.fna&oh=03_AVIXHeLlcmDtmxRPpmISfR2LhMgojuuuBJkvpCPRG_c2Tg&oe=62FEA9AC"
+                        alt=""> -->
+                        <p id="main">or</p>
+                    <img id="fblogin"
+                        src="https://scontent.fbho2-1.fna.fbcdn.net/v/t1.15752-9/292082660_373836661543299_8177465385480244386_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=I1tWRpSysC8AX-X1fTC&_nc_ht=scontent.fbho2-1.fna&oh=03_AVJUTIR0lRFaqMKZakmXu1gu-5yG3XY_UfE0qdESH7VjOg&oe=62FE6C66"
+                        alt="">
+                    <img id="googlelogin"
+                        src="https://scontent.fbho2-1.fna.fbcdn.net/v/t1.15752-9/292169354_560104218930478_7414260162697385605_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=jWsVTGECpH0AX_8onTf&_nc_ht=scontent.fbho2-1.fna&oh=03_AVLYVcXAm9U07OI0fa_H0RKeKJU0omDP9L0cGYT0cMAXdA&oe=62FCD67C"
+                        alt="">
+                    <p>By creating an account, you consent to Lyst’s <a class="hi">Terms & Conditions</a>. To learn more about how Lyst
+                        uses and protects your personal data, please read Lyst’s <a class="hi">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div id="box2">
+            <div id="box3">
+                <h2>As a Lyst member you can…</h2><br>
+                <div id="box4">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <label for="">Save your searches</label><br>
+                    <i class="fa-solid fa-heart"></i>
+                    <label for="">Create a wishlist</label><br>
+                    <i class="fa-solid fa-bell"></i>
+                    <label for="">Get alerts on your items</label>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector("#loginForm");
+    let userData = JSON.parse(localStorage.getItem("userData")) || [];
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        
+        let data = {
+            // name: form.name.value,
+            // lastname: form.lastname.value,
+
+            email: form.email.value,
+            // mobile: form.mobile.value,
+            password: form.password.value
+        };
+        console.log(data)
+        if (checkEmails(data.email) === true) {
+            userData.push(data);
+            localStorage.setItem("userData", JSON.stringify(userData));
+            window.location.href = "login.html"
+        } else {
+            alert("Account already exists");
+        }
+        //  console.log(data)
+
+    });
+    function checkEmails(email) {
+        let filtered = userData.filter(function (el) {
+            return email === el.email;
+
+        });
+        if (filtered.length > 0) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+    // document.querySelector("#login").addEventListener("click", function () {
+    //     window.location.href = "https://www.facebook.com/dialog/oauth?scope=email&state=13453-6c73bf1a542441f48b49bc22aff73872&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Ffacebookloginnotifier%2F&client_id=1667514393504118"
+
+    // })
+    // document.querySelector("#fblogin").addEventListener("click", function () {
+    //     window.location.href = "https://www.facebook.com/dialog/oauth?scope=email&state=13453-6c73bf1a542441f48b49bc22aff73872&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Ffacebookloginnotifier%2F&client_id=1667514393504118"
+
+    // })
+    // document.querySelector("#googlelogin").addEventListener("click", function () {
+    //     window.location.href = "https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=13453-a0f7088ec5214bf7bf3249f699245f1c&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Fgoogleloginnotifier%2F&client_id=1003899641045-oa1oblo54ae2lh2qb2in254k1dgghs1g.apps.googleusercontent.com&response_type=code&include_granted_scopes=true&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&prompt=select_account&access_type=online&flowName=GeneralOAuthFlow"
+    // })
+
+</script>
