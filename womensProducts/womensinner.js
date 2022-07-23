@@ -377,7 +377,12 @@ fetch("./data.json")
 var final = [...mensShart , ...mensTshart , ...mensWatch , ...sunglasses , ...womensBags ,  ...womensDresses , ...womensJewelary , ...womensShoes , ...womensWatch] ;
 console.log(final);
 // kidsdata = final ;
-// disptable(kidsdata)
+disptable(final)
+
+for(let i=0;i<5;i++){
+    kidsdata[i].image = womensDresses[i].image ;
+}
+
 // Array.prototype.push.apply(arr1,arr2); 
 //  disptable(womensBags);
 //  console.log( mensShart,mensTshart , mensWatch , sunglasses , womensBags , womensDresses , womensJewelary , womensShoes , womensWatch , );
@@ -440,6 +445,7 @@ function disptable(k) {
         var avtar = document.createElement("img")
         // var avtar1 = document.createElement("img")
         avtar.setAttribute("src", el.image)
+        avtar.style.height="250px"
         // avtar.addEventListener("mouseover",function(){
         //   changeimage(kidsdata,index)
         //   // console.log(el.image)

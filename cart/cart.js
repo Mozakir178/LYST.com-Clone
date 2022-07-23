@@ -24,7 +24,9 @@ function dispcart(data) {
         var p = document.createElement("p")
         p.innerText = el.name
         var btn0 = document.createElement("button")
-        btn0.innerText = "X Remove"
+        btn0.innerText = "Remove" ;
+        btn0.setAttribute("class" , "remove")
+       
         btn0.addEventListener('click', function() {
             deleteProduct(el, index)
             total();

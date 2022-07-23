@@ -72,7 +72,10 @@ table thead th {
     font-family: "Poppins";
     font-size: 15px;
     font-weight: bolder;
+    
 }
+
+
 
 table tbody td {
     padding: 14px;
@@ -283,5 +286,11 @@ a{
     color: #fff;
 }
 
-
+.remove{
+    /* background-color: red !important;  */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: -15px;
+}
 
