@@ -229,4 +229,7 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      .tophead{
+        display: none;
+      }
       

@@ -216,5 +216,37 @@ function decCurr(){
     import fot from "./componands/footer.js" ;
     document.getElementById('footer').innerHTML = fot() ;
 
+    let count = 0 ;
+    document.getElementById('womensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Women's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "women.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+
+    document.getElementById('mensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Men's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "men.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+
+   
    
 </script>

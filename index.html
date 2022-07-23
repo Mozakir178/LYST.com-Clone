@@ -57,7 +57,7 @@
     <div class="parent">
         <div class="container1">
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">BAG AN ICON</h3>
                     </div>
@@ -66,7 +66,7 @@
                 </a>
             </div>
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">30 UNDER 300</h3>
                     </div>
@@ -84,7 +84,7 @@
                 </a>
             </div>
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">THIS IS FASHION</h3>
                     </div>
@@ -93,7 +93,7 @@
                 </a>
             </div>
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">REFINED GLAMOUR</h3>
                     </div>
@@ -107,7 +107,7 @@
     <div class="parent">
         <div class="container1">
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">DISCOVER OUR STYLISH AND ICONIC MULBERRY BAGS</h3>
                     </div>
@@ -115,7 +115,7 @@
                 </a>
             </div>
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">TARNISH FREE JEWELRY AND STYLES THAT TRANSCEND SEASONS</h3>
                     </div>
@@ -123,7 +123,7 @@
                 </a>
             </div>
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">THE KRIPT | SHOP THE NEW MONTHLY DROP TODAY</h3>
                     </div>
@@ -131,7 +131,7 @@
                 </a>
             </div>
             <div class="slide">
-                <a href="" class="anchor">
+                <a href="./womensProducts/womeninner.html" class="anchor">
                     <div class="h3div">
                         <h3 class="h3">SABRINA ZENG | SUSTAINABLE DESIGNER LEATHER GOODS</h3>
                     </div>
@@ -771,11 +771,48 @@
 
 <script type="module" >
    
-    import women from "./componands/w.js";
-    document.getElementById('navbar').innerHTML = women();
+    import nav from "./componands/navbar.js";
+    document.getElementById('navbar').innerHTML = nav();
 
     import fot from "./componands/footer.js" ;
     document.getElementById('footer').innerHTML = fot() ;
 
+    let count = 0 ;
+    document.getElementById('womensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Women's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "women.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+
+    document.getElementById('mensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Men's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "men.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+
+   
+   
+</script>
+
+
+<script>
    
 </script>

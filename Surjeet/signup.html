@@ -125,7 +125,7 @@
 
         #button{
             margin-top: 30px;
-            width: 94%;
+            width: 100%;
             border: 2px solid #000;
             padding: 10px;
             font-weight: bold;
@@ -134,10 +134,19 @@
             font-size: 15px;
             text-align: center;
         }
+        /* #button a{
+            text-decoration: none;
+            color: white;
+        }
+        #button a:hover{
+            text-decoration: none;
+            color: #000;
+        } */
+        
         #button:hover{
             font-size: 15px;
             margin-top: 30px;
-            width: 94%;
+            width: 100%;
             border: 2px solid #000;
             padding: 10px;
             font-weight: bold;
@@ -171,8 +180,8 @@
         }
 
         #signin:hover {
-            background-color: black;
-            color: white;
+            background-color: rgb(252, 252, 252);
+            color: rgb(0, 0, 0);
         }
         img+p{
             /* font-family: sans-serif; */
@@ -237,7 +246,7 @@
                 </div>
 
 
-                <form id="loginForm">
+                <div id="loginForm">
                     <label for="">Email address</label><br />
                     <input id="email" type="email" placeholder="Enter your Email" /><br />
                     <label for="">Password</label><br />
@@ -246,10 +255,10 @@
                     <label for="">I would like to hear about products, services, and sales, including personalized email
                         alerts from Lyst. You can unsubscribe at any time.</label>
                     <!-- <input type="submit" name="submit" id="submit" value="Create"> -->
-                       <!-- <button id="button">Join Lyst</button> -->
-                    <input id="button" type="submit" value="Join Lyst">   
+                       <button id="button">Join Lyst</button>
+                    <!-- <input id="submit" type="submit" value="Join Lyst">    -->
 
-                </form>
+                </div>
                 <div id="logo">
                     <!-- <img id="login"
                         src="https://scontent.fbho2-1.fna.fbcdn.net/v/t1.15752-9/292456529_1191981751587767_1877862207668419040_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=k_PZp3J87S8AX9CZNUd&_nc_ht=scontent.fbho2-1.fna&oh=03_AVIXHeLlcmDtmxRPpmISfR2LhMgojuuuBJkvpCPRG_c2Tg&oe=62FEA9AC"
@@ -291,42 +300,7 @@
 </html>
 
 <script>
-    let form = document.querySelector("#loginForm");
-    let userData = JSON.parse(localStorage.getItem("userData")) || [];
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        
-        let data = {
-            // name: form.name.value,
-            // lastname: form.lastname.value,
-
-            email: form.email.value,
-            // mobile: form.mobile.value,
-            password: form.password.value
-        };
-        console.log(data)
-        if (checkEmails(data.email) === true) {
-            userData.push(data);
-            localStorage.setItem("userData", JSON.stringify(userData));
-            window.location.href = "login.html"
-        } else {
-            alert("Account already exists");
-        }
-        //  console.log(data)
-
-    });
-    function checkEmails(email) {
-        let filtered = userData.filter(function (el) {
-            return email === el.email;
-
-        });
-        if (filtered.length > 0) {
-            return false;
-        } else {
-            return true;
-        }
-
-    }
+    
     // document.querySelector("#login").addEventListener("click", function () {
     //     window.location.href = "https://www.facebook.com/dialog/oauth?scope=email&state=13453-6c73bf1a542441f48b49bc22aff73872&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Ffacebookloginnotifier%2F&client_id=1667514393504118"
 
@@ -350,10 +324,14 @@
     // import fot from "../componands/footer.js" ;
     // document.getElementById('footer').innerHTML = fot() ;
     
-  document.getElementById('homepage').onclick = () =>{
-    window.location.href = "../index.html"
-  }
+//   document.getElementById('homepage').onclick = () =>{
+//     window.location.href = "../index.html"
+//   }
 
+document.getElementById("button").addEventListener("click",function(){
+        alert("sign up successfull");
+        window.location.href="./login.html"
+    })
 
    
 </script>

@@ -11,9 +11,9 @@ html::-webkit-scrollbar-thumb {
     /* background-color: black; */
     background: linear-gradient(black, grey);
 }
-* {
+/* * {
     letter-spacing: 0.06em;
-}
+} */
 
 .black-text {
     font-weight: bold;
@@ -153,7 +153,7 @@ hr {
     width: 80%;
 }
 
-p {
+.er {
     width: 80%;
     /* border: 3px solid green; */
     margin: auto;
@@ -282,3 +282,6 @@ a{
 #btn2 a{
     color: #fff;
 }
+
+
+

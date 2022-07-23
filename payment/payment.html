@@ -4,17 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         html {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
+
     background-color: white;
-    font-size: 120%;
+    /* font-size: 120%; */
     letter-spacing: .03em;
-    width: 80%;
+
     margin: auto;
-    padding-left: 100px;
+    /* padding-left: 100px; */
+}
+.head>.form{
+    display: flex;
+    align-items: center;
 }
 
 
@@ -23,7 +29,7 @@ form {
     grid-template-columns: 1;
     width: 30%;
     gap: 15px;
-    /* margin : auto ; */
+    
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 30px;
    
@@ -62,8 +68,8 @@ text-align: center;
 }
 .a{
     display:  flex;
-    
-    justify-content: space-between;
+    width : 80% ;
+     justify-content: space-between;
     margin: auto;
     margin-top: 30px;
 }
@@ -73,6 +79,7 @@ text-align: center;
     padding: 5px 15px;
     background-color: rgb(0, 0, 0);
     color: white;
+    
     
 
 }
@@ -87,10 +94,17 @@ text-align: center;
 a{
     text-decoration: none;
     color: #fff;
+
+}
+.gray{
+    padding-left: 150px;
 }
     </style>
 </head>
 <body>
+    <div id="navbar">
+
+    </div>
     
     <div class="address">
 
@@ -133,13 +147,61 @@ a{
 
     </div>
     
-    <div class="color-gray">
+    <div class="gray">
         <label for="packing station"> <input type="checkbox">Send to packing station</label>
     </div>
     <div class="a" >
         <p class="btn-back back"><a href="../cart/cart.html">BACK TO CART</a></p>
         <p class="next"><a href="conform.html">PROCEED TO CHECKOUT</a></p>
     </div>
+    <div id="footer">
+
+    </div>
    
 </body>
 </html>
+
+
+<script type="module" >
+   
+    import nav from "../componands/navbar.js";
+    document.getElementById('navbar').innerHTML = nav();
+ 
+    import fot from "../componands/footer.js" ;
+    document.getElementById('footer').innerHTML = fot() ;
+ 
+    let count = 0 ;
+    document.getElementById('womensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Women's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "../women.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+ 
+    document.getElementById('mensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Men's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "../men.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+   
+ 
+   
+   
+ </script>

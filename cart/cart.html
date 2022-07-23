@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="../Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div id="header"></div>
 
+<body>
+   
+    <div id="navbar" ></div>
 
 
 
@@ -38,8 +41,8 @@
             </tbody>
         </table>
         <hr/>
-        <p class="black-text">YOUR CURRENT PROMOTIONS</p>
-        <p>Free Shipping</p>
+        <p class="black-text er">YOUR CURRENT PROMOTIONS</p>
+        <p class="er">Free Shipping</p>
     </div>
     <div id="check">
         <div>
@@ -59,9 +62,57 @@
     </div>
     <hr/>
     <p class="cen">You can also place your order via telephone.</p>
+
+    <div id="footer">
+
+    </div>
    
 </body>
 </html>
 <script src="cart.js">
 
 </script>
+
+<script type="module" >
+   
+    import nav from "../componands/navbar.js";
+    document.getElementById('navbar').innerHTML = nav();
+ 
+    import fot from "../componands/footer.js" ;
+    document.getElementById('footer').innerHTML = fot() ;
+ 
+    let count = 0 ;
+    document.getElementById('womensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Women's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "../women.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+ 
+    document.getElementById('mensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Men's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "../men.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+   
+ 
+   
+   
+ </script>

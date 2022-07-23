@@ -134,17 +134,17 @@ document.querySelector("#btn2").addEventListener("click", function() {
 
     let user = localStorage.getItem("permision");
     console.log(user);
-    if (user == "allow") {
-        if (data.length == 0) {
-            alert("Your cart is empty")
-        } else {
-            localStorage.setItem("total", (total))
-            // window.location.href = "/Payment Page/address.html"
-        }
-    } else {
-        alert("Please login first")
-        // window.location.href = ""
-    }
+    // if (user == "allow") {
+    //     if (data.length == 0) {
+    //         alert("Your cart is empty")
+    //     } else {
+    //         localStorage.setItem("total", (total))
+           
+    //     }
+    // } else {
+    //     alert("Please login first")
+       
+    // }
 
 })
 
