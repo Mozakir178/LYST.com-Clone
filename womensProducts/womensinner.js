@@ -357,6 +357,7 @@ let womensWatch = "" ;
 let womensBags = "" ;
 let complete = "";
 
+
 fetch("./data.json")
 .then(res => res.json())
 .then(data => {console.log(data) ;
@@ -372,6 +373,13 @@ fetch("./data.json")
  womensDresses = data.womensdress;
  womensWatch = data.womenswatch;
  womensBags = data.womensbags ;
+
+var final = [...mensShart , ...mensTshart , ...mensWatch , ...sunglasses , ...womensBags ,  ...womensDresses , ...womensJewelary , ...womensShoes , ...womensWatch] ;
+console.log(final);
+// kidsdata = final ;
+// disptable(kidsdata)
+// Array.prototype.push.apply(arr1,arr2); 
+//  disptable(womensBags);
 //  console.log( mensShart,mensTshart , mensWatch , sunglasses , womensBags , womensDresses , womensJewelary , womensShoes , womensWatch , );
 }
 
