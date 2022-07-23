@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background-color: white;
+    font-size: 120%;
+    letter-spacing: .03em;
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: 1;
+    width: 40%;
+    gap: 15px;
+    margin : auto ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
+   
+}
+
+input,
+select {
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid rgb(66, 6, 6);
+    padding-left: 20px;
+
+}
+
+input[type="radio"],
+label,
+input[type="checkbox"] {
+    margin-right: 10px;
+    height: 20px;
+}
+
+.text {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-sizing: border-box;
+    padding: 1.5% 3%;
+    text-align: justify;
+}
+
+.color-gray {
+    margin : auto ;
+    text-align: center;
+    margin-top: 40px;
+}
+body>div>p{
+text-align: center;
+}
+.a{
+    display:  flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.a p{
+    border: 3px solid black;
+    padding: 5px;
+    background-color: teal;
+    color: white;
+
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="address">
+
+        <p>PLEASE ENTER YOUR ADDRESS</p>
+       
+      
+
+
+        <div class="gender color-gray">
+            <label for="ms"><input type="radio" name="pre"> Ms. *</label>
+            <label for="mrs"><input type="radio" name="pre"> Mrs. *</label>
+            <label for="mr"><input type="radio" name="pre"> Mr. *</label>
+        </div>
+        <br>
+
+        <form>
+
+            <input type="text" placeholder="first name">
+            <input type="text" placeholder="last name">
+            <input type="text" placeholder="company">
+            <input type="text" placeholder="street *">
+            <input type="text" placeholder="house no *">
+            <input type="text" placeholder="address line 2">
+            <input type="text" placeholder="postcode">
+            <input type="text" placeholder="city">
+            <select name="country" id="country">
+        <option value="india">India</option>
+    </select>
+            <input type="number" placeholder="mobile phone *">
+            <p>* required text</p>
+        </form>
+
+       
+
+
+    </div>
+    
+    <div class="color-gray">
+        <label for="packing station"> <input type="checkbox">Send to packing station</label>
+    </div>
+    <div class="a" >
+        <p class="btn-back back">BACK TO SHOPPING BAG</p>
+        <p class="next">PROCEED TO CHECKOUT</p>
+    </div>
+   
+</body>
+</html>
