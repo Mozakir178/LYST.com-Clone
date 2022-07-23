@@ -394,3 +394,26 @@ body{
     padding-left: 50%;
 }
 
+#topsection {
+    display : flex ;
+    width : 80% ;
+    margin : auto
+}
+#topsection>div{
+    width : 48% ;
+}
+
+#topsection>div:first-child{
+   padding-left: 20%;
+    padding-top: 10%;
+}
+
+#topsection h1{
+    font-size: 50px;
+    font-weight: 300;
+}
+#topsection>div>div{
+    display: flex ;
+    justify-content: space-between;
+    width: 270px;
+}
