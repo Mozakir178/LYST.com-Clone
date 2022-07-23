@@ -109,7 +109,7 @@
       margin: auto;
       display: flex;
       justify-content: space-between;
-      height: 400px;
+      /* height: 400px; */
   }
   
   #body>div:nth-child(1) {
@@ -315,6 +315,9 @@
     margin-bottom: 10px;
     margin-left: -20px;
   }
+  #left_section{
+    height: 400px;
+  }
 /* 
   #price>ul{
     display:  flex;
@@ -335,8 +338,13 @@ span{
    
 }
 #left_section{
-    height: 500px;
+    height: 400px !important;
     overflow-y: scroll;
+    scroll-behavior: smooth;
+    /* border: 1px solid black; */
+}
+body{
+    height: 400px;
 }
 /* 
 #left_section h3::after{
@@ -349,3 +357,63 @@ span{
 }
 
 
+#sponcerd{
+    display: flex;
+   width: 80%; 
+    align-items: center;
+    margin-left: 26%;
+
+
+}
+#sponcerd>div{
+    width:20% ;
+    border: 1px solid black;
+
+}
+#sponcerd p{
+    width: 170px ;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#sponcerd img{
+    width : 80% ;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#textlast {
+    width : 65% ;
+    margin-left: 26%;
+    margin-top: 100px;
+}
+
+#sppr{
+    padding-left: 50%;
+}
+
+#topsection {
+    display : flex ;
+    width : 80% ;
+    margin : auto
+}
+#topsection>div{
+    width : 48% ;
+}
+
+#topsection>div:first-child{
+   padding-left: 20%;
+    padding-top: 10%;
+}
+
+#topsection h1{
+    font-size: 50px;
+    font-weight: 300;
+}
+#topsection>div>div{
+    display: flex ;
+    justify-content: space-between;
+    width: 270px;
+}

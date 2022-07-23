@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+   
+
+    <style>
+        logo>img {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+
+        }
+
+        #loginForm>input[type="submit"] {
+            /* width: 100%; */
+            background: #50504b;
+            padding: 15px 10px;
+            border: none;
+            color: #FFF;
+            font-size: 14px;
+            /* display: block; */
+            margin: auto;
+            margin-top: 30px;
+            border: none;
+
+            cursor: pointer;
+
+            font-size: 20px;
+
+        }
+
+        #login_container {
+
+            width: 28%;
+            box-shadow: 1px solid #999;
+            /* border: 1px solid; */
+            margin: auto;
+            /* margin-top: 150px; */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: #3c3c37;
+            font-size: 33px;
+        }
+
+        #loginForm>label {
+            color: #50504b;
+
+        }
+
+        .label {
+            margin-top: 30px;
+        }
+
+        #loginForm {
+            width: 98%;
+            margin: auto;
+        }
+
+        #loginForm>input[type="submit"] {
+            width: 100%;
+
+            padding: 12px 1px;
+            border: none;
+            color: #FFF;
+            font-size: 14px;
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            border: none;
+            margin-bottom: 30px;
+
+            cursor: pointer;
+
+            font-size: 20px;
+
+        }
+
+        #loginForm>input[type="email"],
+        #loginForm>input[type="text"],
+        #loginForm>input[type="password"] {
+            width: 100%;
+            padding: 12px 5px;
+            resize: vertical;
+            margin-top: 10px;
+            font-size: 18px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+
+        }
+
+        /* input:focus {
+            outline: none;
+        } */
+
+        #logo>img {
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        #logo>img:last-child {
+            margin-bottom: 30px;
+
+        }
+
+        /* div {
+            outline: none;
+            display: block;
+        } */
+
+        #login_container {
+            box-sizing: border-box;
+            font-family: roboto;
+            font-family: Ubuntu, sans-serif;
+            letter-spacing: .05em;
+            line-height: 1;
+            /* font-size: 18px; */
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            text-rendering: optimizeSpeed;
+            /* font-weight: 400; */
+
+        }
+
+        a {
+            color: #444240;
+            text-align: right;
+        }
+
+        #signup>p {
+            color: #444240;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        #password {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* navbar */
+        #topbar {
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(80, 80, 75);
+            color: rgb(235, 220, 220);
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            position: sticky;
+        }
+
+        #navbar {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            position: sticky;
+        }
+
+        .navbar-container {
+            position: sticky;
+            top: 0px;
+            background-color: white;
+            z-index: 3;
+            box-shadow: 0px 0.5px 0.5px #b3b3b3;
+        }
+
+        .nav.change {
+            display: block;
+            right: 0px;
+            background-color: white;
+        }
+
+        #menu {
+            border: 1px solid transparent;
+            width: 28px;
+            height: 28px;
+            margin: 35px 0px 0px 55px;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 5px;
+            width: 100%;
+            background-color: #3c3c3c;
+            display: block;
+            border-radius: 7px;
+            transition: 0.7s ease;
+        }
+
+        #bar1 {
+            transform: translateY(-4px);
+        }
+
+        #bar3 {
+            transform: translateY(4px);
+        }
+
+        .change #bar1 {
+            transform: translateY(4px)rotateZ(-45deg);
+        }
+
+        .change #bar3 {
+            transform: translateY(-6px)rotateZ(45deg);
+        }
+
+        .change #bar2 {
+            opacity: 0;
+        }
+
+        .nav li a {
+            color: #3c3c3c;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bolder;
+        }
+
+        .nav li a :hover {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .nav li {
+            list-style: none;
+            padding: 10px 0px;
+            margin-top: 5px;
+            margin-left: 60px;
+        }
+
+        #logo2 {
+            margin-left: 35.25%;
+            margin-bottom: 20px;
+        }
+
+        #logo2>img {
+            height: 100%;
+            margin-top: -140px;
+            padding-left: 100px;
+        }
+
+        .nav {
+            width: 100%;
+            margin-top: 95px;
+            transition: 0.7S ease;
+            display: none;
+            position: fixed;
+            overflow: scroll;
+            box-shadow: #3c3c3c;
+        }
+
+        .change .popup {
+            height: 500px;
+            border: 1px solid blue
+        }
+
+        #useritem {
+            /* border: 1px solid red; */
+            width: 150px;
+            height: 50px;
+            margin-left: 900px;
+            margin-top: 20px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .use {
+            border: 1px solid blue;
+            height: 25px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* THIS IS SEARCH BUTTOM STYLING */
+        * {
+            margin: 0px;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+            /* color: #444240; */
+        }
+
+        .searchBox {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 410px;
+        }
+
+        .searchText {
+            width: 0px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: all 0.2s linear;
+            color: rgb(5, 0, 0);
+            background-color: #d9e4e6;
+            display: none;
+        }
+
+        .searchBtn {
+            width: 30px;
+            height: 30px;
+            color: rgb(252, 248, 248);
+            position: absolute;
+            margin-left: 150px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            transform: scale(1.4);
+        }
+
+        .searchBox:hover>.searchText {
+            width: 120px;
+            padding: 5px;
+            height: 30px;
+        }
+
+        #userinfo {
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+            height: 30px;
+            margin: 30px 0px 0px 215px;
+            transform: scale(0.8);
+        }
+
+        .user {
+            /* border: 1px solid purple; */
+            width: 30px;
+            height: 30px;
+        }
+
+        /* footer */
+        @font-face {
+            font-family: Gilroy-Light;
+            src: url(Gilroy-Light-300.ttf);
+        }
+
+        @font-face {
+            font-family: Ubuntu-Medium;
+            src: url(Ubuntu-Medium.ttf);
+        }
+
+        @font-face {
+            font-family: Roboto-Regular;
+            src: url(Roboto-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: Roboto-Light;
+            src: url(Roboto-Light.ttf);
+            font-family: roboto;
+            font-family: Ubuntu, sans-serif;
+        }
+
+        #footer p {
+            cursor: pointer;
+            font-size: 17px;
+            color: #3c3c3c;
+        }
+
+        #box1>h2,
+        #box2>h3 {
+            margin-bottom: 10px;
+        }
+
+        #container {
+            display: flex;
+            width: 75%;
+            margin: auto;
+            padding: 45px;
+            font-family: 'Roboto-Regular';
+            font-family: roboto;
+            font-family: Ubuntu, sans-serif;
+        }
+
+        #box1 {
+            width: 30%;
+            display: grid;
+            grid-template-rows: repeat(13, 45px);
+            margin: auto;
+        }
+
+        #box1>*,
+        #box2>* {
+            font-size: 16px !important;
+        }
+
+        #box2 {
+            width: 30%;
+            display: grid;
+            grid-template-rows: repeat(6, 42px);
+        }
+
+        #box3 {
+            width: 30%;
+            height: auto;
+        }
+
+        .image {
+            width: 7%;
+            cursor: pointer;
+        }
+
+        #socialMedia {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+        }
+
+        #btn {
+            color: white;
+            background-color: #50504b;
+            padding: 10px;
+            cursor: pointer;
+            margin-left: 12px;
+        }
+
+        #box3>* {
+            padding: 7px;
+        }
+
+        #footer input {
+            border: transparent;
+            font-size: 16px;
+            border-bottom: 2px solid #50504b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .link a {
+            color:
+                #50504b;
+            text-decoration: none;
+        }
+        /* .signup {
+            color: #444240;
+            text-align: right;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar-container">
+        <div id="topbar">UPTO 20% OFF SITEWIDE</div>
+        <div id="navbar">
+            <div id="menu" onclick="afterclick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+
+            <div class="popup">
+                <div id="flex">
+                    <ul class="nav" id="nav">
+                        <li><a href="#">WHAT'S NEW?</a></li>
+                        <li><a href="#">PARTY TOP PICKS</a></li>
+                        <li><a href="#">BEST SELLER</a></li>
+                        <li><a href="#">SHOP BY INGRIDIENT</a></li>
+                        <li><a href="#">SHOP BY CONCERN</a></li>
+                        <li><a href="#">SHOP ALL PRODUCT</a></li>
+                        <li><a href="#">HAIR CARE</a></li>
+                        <li><a href="#">BODY CARE</a></li>
+                        <li><a href="#">IKWI NUTRITION</a></li>
+                        <li><a href="#">KNOW US BETTER</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="useritem">
+                <!-- search -->
+                <div class="searchBox">
+                    <input type="text" class="searchText" placeholder="Search">
+                    <a href="#" class="searchBtn">
+                        <svg data-icon="search" viewBox="0 0 512 512" width="15px" height="15px">
+                            <path
+                                d="M495,466.2L377.2,348.4c29.2-35.6,46.8-81.2,46.8-130.9C424,103.5,331.5,11,217.5,11C103.4,11,11,103.5,11,217.5   S103.4,424,217.5,424c49.7,0,95.2-17.5,130.8-46.7L466.1,495c8,8,20.9,8,28.9,0C503,487.1,503,474.1,495,466.2z M217.5,382.9   C126.2,382.9,52,308.7,52,217.5S126.2,52,217.5,52C308.7,52,383,126.3,383,217.5S308.7,382.9,217.5,382.9z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div id="userinfo">
+
+                <!-- SHIPMENT -->
+                <div id="shipment" class="user">
+                    <a href="https://www.masaischool.com/">
+                        <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Group_346.svg?v=1655211633">
+                    </a>
+                </div>
+
+                <!-- CART -->
+                <div id="cart" class="user">
+                    <a href="../cart-page/cart.html">
+                        <svg viewBox="-35 0 512 512.00102" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- LOGIN USER -->
+                <div id="login" class="user">
+                    <a href="../login-page/login.html">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M256,0c-74.439,0-135,60.561-135,135s60.561,135,135,135s135-60.561,135-135S330.439,0,256,0z M256,240
+                                        c-57.897,0-105-47.103-105-105c0-57.897,47.103-105,105-105c57.897,0,105,47.103,105,105C361,192.897,313.897,240,256,240z">
+                                    </path>
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M297.833,301h-83.667C144.964,301,76.669,332.951,31,401.458V512h450V401.458C435.397,333.05,367.121,301,297.833,301z
+                                         M451.001,482H451H61v-71.363C96.031,360.683,152.952,331,214.167,331h83.667c61.215,0,118.135,29.683,153.167,79.637V482z">
+                                    </path>
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="logo2">
+            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/unnamed_250x_200x_2x_260x_24408e11-6e3a-4a0c-8327-74d0455f7696_260x.jpg?v=1646547348"
+                alt="">
+        </div>
+    </div>
+    <!-- login -->
+    <div id="login_container">
+
+        <h1 id="loginh">Login</h1>
+        <div id="logo">
+            <img id="fblogin"
+                src="https://scontent.fbho3-2.fna.fbcdn.net/v/t1.15752-9/287225470_533769011811533_3915399122427470749_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=E7PDaZ6pSrMAX-WVy9d&_nc_ht=scontent.fbho3-2.fna&oh=03_AVKPUOzsBpuVsRdxWwJCp3OK11_C1GEUYsuapL2rPeBo8A&oe=62D02471"
+                alt="">
+            <img id="googlelogin"
+                src="https://scontent.fbho3-2.fna.fbcdn.net/v/t1.15752-9/285543616_427065112362853_4890415742519111200_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=fW86AnegLPEAX-34JsY&_nc_ht=scontent.fbho3-2.fna&oh=03_AVI083DK5mAndErNl3dySQmipGo1eLJnDSvJDSXF7fgzVw&oe=62CF920F"
+                alt="">
+        </div>
+        <form id="loginForm">
+            <label for="">EMAIL</label><br />
+            <input id="EMAIL" type="email" /><br />
+
+            <div id="password">
+                <label for="">PASSWORD</label><br />
+                <a class="signup" href="#">Forgot ?</a>
+
+            </div>
+
+            <input id="PASSWORD" type="password" /><br />
+            <input type="submit" name="submit" id="submit" value="Sign In">
+        </form>
+
+        <div id="signup">
+
+            <p> <a class="signup" href="singnup.html">Don't have an account? Sign up here</a></p>
+        </div>
+
+    </div>
+    <div id="footer">
+        <hr>
+        <div id="container">
+            <div id="box1">
+                <h2>GET TO KNOW US</h2>
+                <p> DOWNLOAD THE APP</p>
+                <p class="link"> <a href="AboutUS.html">ABOUT US</a> </p>
+                <p>CONTACT US </p>
+                <p>EARTHCARE</p>
+                <p>AFFILIATE PROGRAM</p>
+                <p>TERMS & CONDITIONS </p>
+                <p>REFUND & CANCELLATION </p>
+                <p>PRIVACY & POLICY</p>
+                <p>ORDER & SHIPPING</p>
+                <p>PAYMENT & TERMS</p>
+                <p>TERMS OF SERVICES</p>
+                <p>REFUND POLICY</p>
+
+            </div>
+
+            <div id="box2">
+                <h3>ALSO AVAILABLE ON</h3>
+                <p>NYKAA</p>
+                <p>AMAZON</p>
+                <p>FLIPKART</p>
+                <p>MYNTRA</p>
+
+
+            </div>
+
+            <div id="box3">
+                <h3>STAY UPDATED</h3>
+                <div>
+                    <input type="text" placeholder="example@example.com">
+                    <button id="btn">SUBMIT</button>
+                </div>
+
+                <div id="socialMedia">
+                    <h3>FOLLOW US</h3>
+                    <img class="image"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8EAgQAAADFxcWgoKC8vbxGRUZbWltTU1M0NDQoKSg4OThDQkNhYWFtbG0gISAsLixLSUsdHR11dXVnaGcODQ4YFhjx8fH3+PeysrKqqqpQT1B9fX1nZmdhYGHV1dXn6OeNjI2Eg4Td3t1WVFbS0dLq6eqXmJebm5sjICO4H7iJAAAD20lEQVR4nO3di3LaMBSE4ViAyQ1IAsQEaLnlQt7/Bcu0M50yMcFHVrUrsf8DZM4XEyC2LF9dwZpVu87L/FD3XB3ckJ5Vu5fNpJy6pm3RA5uqOpvF05/Bi4alJFx3SxsuLWE1L824lITrbeGj+y1coodvULX0OnrpCLstfCkId2Ub30E4RgvONG/n4xdu2wLJhbNBWx+78LU9sHBDtOKbAhzBg3CCZpxuHALILOwGARbuBxpyqrfW76LswmkYIK9wGwhYuAGaUt8q0Gv0IPyJttQX5IOCWRjuELIKwx3CwvXRmLrewx1CUuFHOCCpMNRnIa1wFRDIKQz5Ii3cNZpTU5m7MOQ7KaewExJIKQz6Z0gpnOQunN3lLqyCvtEwCtdBgYzCsG+lhVugQV+aZy/c+18qrI3vVbqxCs+sxSjRoC9Zz7I5d//RW61n6LmbtzSutbhJbkmQ7XKFG72jBzY3tAl76Hntmc6zuSl6XI/6JiHrVYnvujYJ9+hxPXo0CRP8M7y6Nwnf0ON6ZPr30O3Q43p0YxKu0eN69JC98NYkrNDjejTKXvgk4YUJE/q38G/5C02XRy9AiJ7WJ4vQSUiZhBLyJ+GRsEBP65OO4ZEwxdOlNuEzelqfTMIn9LQ+mYQj9LQ+mYS36Gm/q+rUZxOe+CH/hDtn3Dl1Wbo58OwVbuxV7sCrSk7+DnB358USfmQvfMleiFvIEEfo3Cp7Ie76Wywh7qx4JCHwu3kkIfB7XSThY/ZC4M3qkYSb7IXAJUWRhLgvbbGEwNWnkYS4L22xhOvshcCLxFGE0JPicYTIE6pxhPfZC5F7RsQRInfciyPEnWmLJexmL0SudI8jRK50jyNE3hUVQ4g80xZJOM1eeIdcnRlFCN2cJooQurVnFCF0m+QoQujNe2GEZy7iQ2/eC7JSoSi/9rhYLPr9wXC83MyhC93fe/U9Z7/qy3K/hYScSSghfyZhkqsvJZSQPwnTF35mL7TsOCAhZxJKyJ9JSH3PzKlMwgf0tD5JKCF/EqYvtOxmJiFnEkrIn4RHwjv0tD5JKCF/EqYvtOwjnKbQshe0hJxJKCF/Eh4JkTdueSehhPxJmL7Q8iTZNIWW58xIyJmEEvJnEvI9vrFBJiHfQ0YbZBICd/LyT8L0hZanA0rImYQXJkzy89Ak5HvodoMkTF/4mr3Q8sRjCTmTUEL+TELoDju+SZi+cCChhPRJKCF/JuEAPa1PEqYvnEgoIX0SSsifSQh8mpN/JiF0F13fhhJKSJ+EEvIn4YUJx+hpfRpLKCF9EkrIX/7C4ZmHchyV5Cd+b99t3P5/P4PkF79qWBJNnBzqAAAAAElFTkSuQmCC"
+                        alt="fb Error">
+                    <img class="image"
+                        src="data:image/png;base64,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"
+                        alt="INSTA ERROR">
+                    <img class="image"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQsAAAC8CAMAAABYM3sZAAAAgVBMVEUAAAD29vb39/f6+voaGhrIyMjw8PDS0tJubm4jIyN1dXXz8/NpaWlycnLf39/r6+vl5eUoKCiGhoYzMzPb29u0tLTBwcGurq6YmJg/Pz/Ozs6Pj4+AgIBZWVmgoKCVlZUNDQ1jY2M0NDQ9PT1LS0sbGxtbW1tHR0clJSWxsbGfn59cjgvnAAAKAUlEQVR4nO2d7XaqOhCGS1LAggWKfAkIWLW2+/4vcCdoq0CC0jJJUN+1zvmzKUkeB8gkM5Mn9NC3npD20EEPFic9WJz0YHHSCCzQ8b/LF/5Cxxb67s/51+HjGsKi/0p0Givuio7KPsq4qOOF9K7smzVQ/Xrw7RH8xi44IzZczwnMNNWjMIzjokiSsswyv1ae5xbRa63ZBR2uoteTPzv8fZaVZZIURRyHYaTrqRk4nmu0+9AFNITRMLs4MkDktz2MOwrjIsny+Xq7X7y97J6r6kmQqup59/K5WG4/ZlaWFHEYHfnYGjpCuXpgg1gcjQBphhvoYVH61my9XS5ehI38GlU7QmY9s/yyCPWAQEE/T+dYLKglGIGpx5m1Wqo1+j5VL5vVaxbrpuPSH3EMFoStq2ezTSV7bL/WZl1G1+HgsTh+zJCh+2+yR/N3LSzdvfys9NkFwnY4q2SPYxxV69C4ZBt8FgjZ0YfsIYyprW5ceB/wWCDs+LJ7P7Ysp9c0uO8LO9rI7vr42sQ24k++OCywnTzL7jiISgMPswuE3Fx2p6E087gwmCywN5fdZTitHR4MFgt0yyienlY8y2CwQIYlu7uwmruc70WHBdIy2Z2FVs6eaDBYfMnuKrwK5lPSYYHNheyewutNZxlGmwWyb/q9+a0V65XRYRHL7qYYsZ6SFgvkLWX3UowWDmMu0WSBC9mdFKVM63gmTRbIe5fdR1F6C7oTqyaLO3lbUCWdN0aDBXJvavGmX8vOp6TBAuuV7B6KUxW1DaPJ4uZn3+fKbcRngbS97P6J1N7rY2He5loWTynms8B39BWhas89G3Zxcwvf/Zpj7lwLuWvZvROrJeKzCO7AWz/XS8BlgU3ZnROsKsRcFqHszolWwrQL+j98s3siPOVNR/VkF0jbyu6baLVWt85YGDcQaDFMrQWdMxZOJbtvwtWceZ5Y4Eh2z8Qr5LBAQMt71Ye605aEwwJqu2wXpcpuM1hsFmC7qM86xulMTQ94xX53gnkjhAXCRrSCufvftGxsrJ5YOEALOZSFhrCmryuYBv6gN4fJAgdA0wvC4tCAGyq3D7UzWSwQTiuY9r5ZkCaMULGpbXP992QXUNOLHxaUhher9YH9YrOAWuA7Y0FpuLFKT0rBZpEANddgQWkESQXU1HCV55uqJxZQi50tFnVEcanKk9LYIzmxmAE112FBaZhZBdTcML0aTBZQkyEGC9IaMpXIxVi7TBZQrzQmC9KepisQOrnyGCyQBvUzcVhoCGn6q2w3Zc9k4X4CNcdjUefqRJJd2MbK1g8LbwfUHIcF+qaxroAavkaNLZIfFgFUl/h2caBhhBJd2IrJwqyAmutnUef3xfLcFPN8UvzNQodq7RKLw8RcVuQHgwWCW/m9zILahlfIcVN0hl3AbSBew6KemCcyJuYRiwVYdsBVLGoXycnET0VD1jMCFpNznV1QFhgH2QtUNziKWXYBFvx8LYsDDzMXS6NgsfgH1doAFnSNGKV5BdUVhv6xWEAt5QyyC62eiuoCk+gTFosSqrWBLOoyE9ErVG/aKlkswEJ+B7OgvTFCQXF0mfIs6JPyJYSGrz6LOo9chJuSs1iAxbn+kkVtGwW4CzsRFrWb8g+48oR1Fvv746eCBfH9gQWtZeWVoE6bxfLZlWShHdwUqOXHJyYLpKnKorYNH8yFfZ0UC9o728yBVswnxoL68xgBOW0zBgsbbONmBLugwoYOscs5nyIL6qakr9XYvZsmi3qNePQQuKmyqKeiIztt02UxfmDPlFnU35R4vCdl2izqELhkrKno5FmMuAo4bRYYO/l4+yhTZkGm46P2dLosiE1k41ZumSoLhAJ/bBdtkiyI6+4m4y/rTJEFQk4C4ahOjwWdbcIsik+NBU0vgFoCnhYL6o/BbQ1MiQWxCdB0pOmwoPGfsCW/prLeCbF20xZjvVNTjwUNS4FPa2XYhXIsEDbSdQXVp5PU3zejewCWkMAt5VlQZ1RQCBuLhTr77Ig4o3B7hm0pHXOAbEdk9pW6cTnEGR17geKClGVBnVHBRXYVjV0jU6t/wlMnmDGNsuM7EfJkJJEwY13lxv3SBQopqVbMGGiZ8eCEhKykM2ZsvLw8AZp+J63+NDNnQlb+CK2l81FBNX5RjFwaWXlFlITUdF1mjpWMfDOE7XQGlSN8nZi5d+LzEBHWUquCavZKnRcP+vFTU6jWeDncmDijgEGsV4qZqys4bxlrYCGbQ1QFLBZC89nJJFOcW94nmtvfqZcjss4BdUZVKIpC9M6s+WAIqX+B6iSZTJmyUuxaIAjKZpt2QZ6OUqGzb1g1YpCYejnE8SiUKkPHrB2E4Oso0QiKQrFTPTg1pSDra6Gatv2l3BFAua2xWEAtbB3sQtoCRb9Kdv1OqAWM2i5k1wjiiVObELBOI3FGFT3Og1OzEso526VYHz/vYxzxaplCHVb0nAhL1B8sdo1bDYOdxFIB3XcEcWofI0+pSZAY8Wpiu8pWd4fTCrFZ2Hd3FAu3hr6GwHbO1BXvbIV7O+mNinnmBl1XAKvIp6503jPiKrD+KFb8M3pshdZYxGjlcVhoWFGfAU6tE1TPWdzVSbJUDY/9bF3rDg9v6jsDEGy7SFE1PbMGi7vzSDb8s+qRoa5zDaI1/yxZwJgtNdU+rb7B4s5enp3DQM7PW/YU2eUUo/e+M8nvbLZlGb0s7spVjTv7/+cs7ur06XcH9bKw7+iEdr8TItNgoSGoA9/UU2VeYoGgdpiVU8tH7bLQwE4CVE27tIOizeJu3hg+usiCfEruYnWr+xFhsbiLOUYVM1B0WMCdNaySGC9OFgvilSgYPzOuVm1PhMdCw+aNvzKWATtan8FCQ9FNT8XfuIkLLBY4umHnfRFh5hPCZkGmnxFwuXZ5WjAmWX0s6AGnN7oO/NF1Qy6woNnUt/hprSz6Bakjb69nQb4mNlhNK2l6D5nziossaCVA67Z23v2A4YRcxYIeBJyKKk8Cr+c8xZeShntY0CMs0/wm5hqffvr9ePDH28eCvmYwdkN/W8key19UrfLIxbj/+bhoF4crsOaZYbneLib39nhe7OdZZHoab3Y1lEWdBEOEbMNJw6L0rflqv3ipZA+UreplsV/NLb8sQt0xbK3uOep7Moax+CaCKBSCxPCcwNSjryLJrDXh8rl7riSO/nn3WY8/S4qvSDcDx3MNm/aU6srBDWTRYFJbyrc013PMVI/Cr7hIysz3c8t6nc/XH6vVarvd75fL5Wbzvlgs3g76fLmgz+OFi8X7+2azWS73++2W3OxjPZ+/Wnnu+1mZFHEcRnpKh66d9wZ1GFz9aw9m0bk1Qm08SCPG47quR+RQBbXMwTr8XX0Lh9yL3NIgdo/aAx88hNFYXAUanQl3LOl6oa76evMnKr9icaN6sDjpweKkB4uTCIuHvvUfaIGi10BfuZIAAAAASUVORK5CYII="
+                        alt="youtube Error">
+                </div>
+                <p>© 2022 Dot & Key</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector("#loginForm");
+    let userData = JSON.parse(localStorage.getItem("userData")) || [];
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let data = {
+
+            email: form.EMAIL.value,
+
+            password: form.PASSWORD.value
+        };
+        if (checkLogin(data.email, data.password) === true) {
+            
+            localStorage.setItem("login", JSON.stringify(data));
+            alert("Login Successful");
+            localStorage.setItem("permission","allow")
+            
+            window.location.href = "../index.html"
+
+        } else {
+            alert("Wrong Username or Password");
+            localStorage.setItem("permission","notallow")
+        }
+
+
+    });
+    function checkLogin(email, password) {
+        let filtered = userData.filter(function (el) {
+            return email === el.email && password === el.password;
+
+        });
+        if (filtered.length > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    document.querySelector("#fblogin").addEventListener("click", function () {
+        window.location.href = "https://www.facebook.com/dialog/oauth?scope=email&state=13453-6c73bf1a542441f48b49bc22aff73872&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Ffacebookloginnotifier%2F&client_id=1667514393504118"
+
+    })
+    document.querySelector("#googlelogin").addEventListener("click", function () {
+        window.location.href = "https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=13453-a0f7088ec5214bf7bf3249f699245f1c&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Fgoogleloginnotifier%2F&client_id=1003899641045-oa1oblo54ae2lh2qb2in254k1dgghs1g.apps.googleusercontent.com&response_type=code&include_granted_scopes=true&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&prompt=select_account&access_type=online&flowName=GeneralOAuthFlow"
+
+    })
+    // navbar
+    function afterclick() {
+        document.getElementById("menu").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+    }
+
+    document.getElementsByClassName('searchBtn')[0].addEventListener('mouseover', () => {
+        document.getElementsByClassName('searchText')[0].style.display = 'block';
+    });
+
+    document.getElementsByClassName('searchText')[0].addEventListener('mouseover', () => {
+        document.getElementsByClassName('searchText')[0].style.display = 'block';
+    });
+
+    document.getElementsByClassName('searchBtn')[0].addEventListener('mouseout', () => {
+        document.getElementsByClassName('searchText')[0].style.display = 'none';
+    });
+
+    document.getElementsByClassName('searchText')[0].addEventListener('mouseout', () => {
+        document.getElementsByClassName('searchText')[0].style.display = 'none';
+    });
+</script>

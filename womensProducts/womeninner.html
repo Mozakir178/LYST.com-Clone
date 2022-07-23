@@ -9,16 +9,32 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Poppins:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="womensinner.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   
 </head>
 
 <body>
-    <div id="header"></div>
-
+    <div id="navbar"></div>
+<hr style="width :95% ; margin-top: -5px; margin-bottom: 0px;">
  
-    <hr />
-    <h1>Womens</h1>
+  
+    <div id="topsection">
+      <div>
+         <h1>Bag an Icon</h1>
+       <div>
+         <p><i class="fa-solid fa-user"></i> Created by Lyst</p>
+         <p><i class="fa-solid fa-bag-shopping"></i> products</p>
+       </div>
+       <p>The Collector’s Vault</p>
+      </div>
+     <div>
+      <img src="https://cdna.lystit.com/480/480/r/cms/ea59bbea_bf2d_4441_90aa_b0a1a8ee614b_21dfec2728.png" alt="">
+     </div>
+
+    </div>
     <div id="upper">
       
         <div>
@@ -157,8 +173,100 @@
          
         </div>
     </div>
+<h1 id="sppr">sponcerd product</h1>
+    <div id="sponcerd">
+      <div>
+         <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSXRpocL87e4BDRgAuTisC74BrafrNACwmkjg1HotmgCgMB9mCR_1jgWQo7PxD4MUMY92vdcdDJkQKM2BLdjnxXCkM53OpuKvaBukQE3o4&usqp=CAs" alt="">
+         <p>Gucci Unisex Sweatshirt for</p>
+         <p>₹699.00</p>
+      </div>
+      <div>
+         <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQxY1zBg8yqjz2t3lz6lta_MnBGLjOc32tjeRZEVh9jJZyEZIb4k5ljLfKF95fHj2fu16G_IX2cbHGym2mr3ZHVkx6rOvg9maXwUFnIB4o&usqp=CAs" alt="">
+         <p>Gucci Unisex Hoodie for Men/Women</p>
+         <p>₹1,199.00</p>
+      </div>
+      <div>
+         <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTUDVmhzlIv_W71Su9MNHsOOnvMSzrr5lkKAN8_Fc3epNVOU91PW7CDLw86vf1wLT7LkAECSNXDR-4jnqBBCKLFP3NMFgEU7A0qfcYkpNPJUFnXaMPRLmlwJg&usqp=CAs" alt="">
+         <p>Gucci T-Shirt for Men M(40 Inches) / Black</p>
+         <p>₹599.00</p>
+       
+      </div>
+
+      <div>
+         <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQACRQ7JcFIHLsSHJmqaM85WU1f9Axlt_bHNz4xPbFsR1dvQM35br1HeBGpnonPMnL2KYNzbJStGVdsScOdEpVT5u-jQokgpQkek0iYZNF_v6MlUZPlbBO9&usqp=CAs" alt="">
+         <p>Gucci Printed Mens Tracksuit Black</p>
+         <p>₹899.00</p>
+      </div>
+     
+    </div>
+   <div id="textlast">
+<p>
+   Founded by Guccio Gucci in Florence in 1921, Gucci is an Italian fashion house that represents tradition and heritage as well as modern eccentricity.
+</p>
+<p>
+   
+Renowned for its signature interlacing logo, bamboo-handle bags and horsebit loafers, the brand promotes a sleek and unparalleled image that chimes with classic style. Under the creative direction of Alessandro Michele since 2015, Gucci has redefined luxury with its eclectic yet romantic collections of ready-to-wear, shoes and accessories that convey an aesthetic in line with a distinct contemporary vision.
+
+</p>
+   </div>
 
     <div id="footer"></div>
+
+
+    <div id="productdetails">
+      <div id="img-cont">
+          <img src="" alt="" id="img">
+      </div>
+      <div id="info">
+          <h3 id="title"></h3>
+          <p id="cat"></p>
+          <p id="price1"></p>
+          <p id="color1"></p>
+          <button id="btn-fixed"> shop now</button>
+      </div>
+      <p id="fixed">
+         X
+      </p>
+  </div>
+  <style>
+    #productdetails{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            width: 60%;
+            margin: auto;
+            position: fixed;
+            left: 20%;
+            bottom: 15%;
+            background-color: white;
+            padding: 30px;
+            display: none;
+        }
+        #productdetails img{
+            width :450px ;
+            height: 500px;
+        }
+        #productdetails div+div>*{
+            margin-bottom: -15px;
+        }
+        #productdetails button{
+            width : 300px ;
+            background-color: black;
+            color: white;
+            height: 40px;
+            margin-top: 30px;
+        }
+        #productdetails #fixed{
+         position: absolute;
+         right: 5% ;
+         top: 5%;
+        }
+  </style>
+
+<div id="footer">
+
+</div>
 
 </body>
 
@@ -169,4 +277,67 @@
 
 <script>
    
+</script>
+
+
+<script>
+   let data = JSON.parse(localStorage.getItem("productDetails")) ;
+   console.log(data);
+   
+   let a =document.getElementById('fixed');
+   a.addEventListener("click" , fixed) ;
+   function fixed(){
+      document.getElementById('productdetails').style.display = "none";
+   }
+   
+
+</script>
+
+
+
+<script type="module" >
+   
+   import nav from "../componands/navbar.js";
+   document.getElementById('navbar').innerHTML = nav();
+
+   import fot from "../componands/footer.js" ;
+   document.getElementById('footer').innerHTML = fot() ;
+
+   let count = 0 ;
+   document.getElementById('womensub').onclick =() =>{
+       count++ ;
+       if(count%2===1){
+           document.querySelector('.tophead').style.display = "flex" ;
+           document.getElementById('gender').innerHTML = "All Women's"
+           document.getElementById('gender').onclick = () =>{
+               window.location.href = "../women.html"
+           }
+       }
+       else{
+           document.querySelector('.tophead').style.display = "none" ;
+       }
+      
+   }
+
+   document.getElementById('mensub').onclick =() =>{
+       count++ ;
+       if(count%2===1){
+           document.querySelector('.tophead').style.display = "flex" ;
+           document.getElementById('gender').innerHTML = "All Men's"
+           document.getElementById('gender').onclick = () =>{
+               window.location.href = "../men.html"
+           }
+       }
+       else{
+           document.querySelector('.tophead').style.display = "none" ;
+       }
+      
+   }
+  
+
+   document.getElementById('cartnav').onclick =() =>{
+      document.getElementById('cartnav').href = "../cart/cart.html"
+   }
+  
+  
 </script>

@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="../Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+   
+    <div id="navbar" ></div>
+
+
+
+    <br>
+
+    <div id="shopingbag">
+        <div>
+            <p class="black-text">YOUR SHOPPING BAG</p>
+        </div>
+        <div><button class="btn">PROCEED TO CHECKOUT</button></div>
+    </div>
+    <!-- cart product -->
+    <div id="cartproduct">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th style="font-weight:bold ;font-size: 16px;">Price</th>
+                    <th style="font-weight:bold ;font-size: 16px;">Quantity</th>
+                    <th style="font-weight:bold ;font-size: 16px;">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+
+
+            </tbody>
+        </table>
+        <hr/>
+        <p class="black-text er">YOUR CURRENT PROMOTIONS</p>
+        <p class="er">Free Shipping</p>
+    </div>
+    <div id="check">
+        <div>
+            <div>
+                <input type="text" placeholder="Gift Card/Store Credit/Promo Code" id="promo">
+                <button id="code" class="black-text">USE CODE</button>
+            </div>
+            <div>
+                <button id="cont"><a href="../womensProducts/womeninner.html">CONTINUE SHOPPING</a></button>
+            </div>
+        </div>
+        <div>
+            <h4>Subtotal € <span id="subtotal"></span></h4>
+            <h4>Grand Total € <span id="grandtotal"></span></h4>
+            <button class="btn" id="btn2"><a href="../payment/payment.html">PROCEED TO CHECKOUT</a></button>
+        </div>
+    </div>
+    <hr/>
+    <p class="cen">You can also place your order via telephone.</p>
+
+    <div id="footer">
+
+    </div>
+   
+</body>
+</html>
+<script src="cart.js">
+
+</script>
+
+<script type="module" >
+   
+    import nav from "../componands/navbar.js";
+    document.getElementById('navbar').innerHTML = nav();
+ 
+    import fot from "../componands/footer.js" ;
+    document.getElementById('footer').innerHTML = fot() ;
+ 
+    let count = 0 ;
+    document.getElementById('womensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Women's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "../women.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+ 
+    document.getElementById('mensub').onclick =() =>{
+        count++ ;
+        if(count%2===1){
+            document.querySelector('.tophead').style.display = "flex" ;
+            document.getElementById('gender').innerHTML = "All Men's"
+            document.getElementById('gender').onclick = () =>{
+                window.location.href = "../men.html"
+            }
+        }
+        else{
+            document.querySelector('.tophead').style.display = "none" ;
+        }
+       
+    }
+   
+ 
+   
+   
+ </script>

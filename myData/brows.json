@@ -1,0 +1,20 @@
+{
+    "BrowswAndShop" : [
+        {
+            "image": "https://cdna.lystit.com/1020/608/r/banners/2021/04/09/446-665885624.jpeg",
+            "title" : "Gucci New Sneaker Design",
+            "detail" : "Introducing Gucci's new Sneaker design The Ryton"
+        },
+        {
+            "image" : "https://cdna.lystit.com/1020/608/r/banners/2021/04/19/864-302481388.jpeg",
+            "title" : "Burberry Inside The Bloom",
+            "detail" : "The new collection for men and women by Riccardo Tisci. shop now at Burberry."
+        },
+        {
+            "image" : "https://cdna.lystit.com/1020/608/r/banners/2021/04/09/445-675354760.jpeg",
+            "title" : "Last Chance to Shop the Moda Operandi Sale",
+            "detail" : "Up to 80% Off the Designer Sale. No Code Needed"
+        }
+        
+    ]
+}
