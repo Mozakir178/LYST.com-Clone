@@ -7,9 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="./wmcss/wm.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     
 </head>
 <body>
+    <div id="navbar"></div>
      <div id="timg">
        <img src="./image/topimg.png" alt="">
      </div>
@@ -155,6 +159,10 @@
             
         </div>
     </div>
+
+    <div id="footer">
+
+    </div>
 </body>
 </html>
 
@@ -202,6 +210,19 @@ function decCurr(){
 }
 
 
+</script>
+
+
+
+<script type="module" >
+   
+    import women from "./componands/w.js";
+    document.getElementById('navbar').innerHTML = women();
+
+    import fot from "./componands/footer.js" ;
+    document.getElementById('footer').innerHTML = fot() ;
+
+   
 </script>
 
 

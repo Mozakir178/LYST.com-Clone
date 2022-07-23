@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up </title>
     <script src="https://kit.fontawesome.com/a32cf6c269.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         #box {
             display: flex;
@@ -23,6 +25,10 @@
             width: 100%;
             cursor: pointer;
 
+        }
+        a{
+            text-decoration:  none;
+            color: black;
         }
         #login_container {
             padding: 20px;
@@ -206,11 +212,15 @@
         #box4>i{
             margin: 0px 10px 15px 0px;
         }
-       
+       #signup a{
+        color: white;
+       }
     </style>
 </head>
 
 <body>
+    <div id="navbar"></div>
+    <hr>
     <!-- login -->
     <div id="box">
         <div id="box1">
@@ -272,6 +282,10 @@
         </div>
     </div>
 
+    <!-- <div id="footer">
+
+    </div> -->
+
 </body>
 
 </html>
@@ -325,4 +339,21 @@
     //     window.location.href = "https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=13453-a0f7088ec5214bf7bf3249f699245f1c&redirect_uri=https%3A%2F%2Foneclicksociallogin.devcloudsoftware.com%2Fuser%2Fgoogleloginnotifier%2F&client_id=1003899641045-oa1oblo54ae2lh2qb2in254k1dgghs1g.apps.googleusercontent.com&response_type=code&include_granted_scopes=true&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&prompt=select_account&access_type=online&flowName=GeneralOAuthFlow"
     // })
 
+</script>
+
+
+<script type="module" >
+   
+    import nav from "../componands/navbar.js";
+    document.getElementById('navbar').innerHTML = nav();
+
+    // import fot from "../componands/footer.js" ;
+    // document.getElementById('footer').innerHTML = fot() ;
+    
+  document.getElementById('homepage').onclick = () =>{
+    window.location.href = "../index.html"
+  }
+
+
+   
 </script>

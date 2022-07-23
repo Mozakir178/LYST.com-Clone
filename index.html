@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your World of Fashion Lyst</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .parent {
             width: 100%;
@@ -759,8 +761,21 @@
         </div>
     </div>
 
+    <div id="footer"></div>
+
 </body>
 
 </html>
 
 <script src="./script/index.js"></script>
+
+<script type="module" >
+   
+    import women from "./componands/w.js";
+    document.getElementById('navbar').innerHTML = women();
+
+    import fot from "./componands/footer.js" ;
+    document.getElementById('footer').innerHTML = fot() ;
+
+   
+</script>

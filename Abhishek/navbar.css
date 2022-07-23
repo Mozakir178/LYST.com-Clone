@@ -1,4 +1,6 @@
-/* dropdown */
+.tophead{
+  margin-top: 20px;
+}
 .dropbtn {    
 
     padding: 16px;
@@ -13,6 +15,7 @@
     min-width: 160px;
     overflow: auto;
     z-index: 1;
+    background-color: #fff;
   }
   
   .dropdown-content a {
@@ -35,6 +38,7 @@
       cursor: pointer;
       font-size: 14px;
       align-items: flex-end;
+      padding-right: 50px;
       
   }
   

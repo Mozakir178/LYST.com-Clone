@@ -7,8 +7,11 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="wmcss/wm.css">
+    <link rel="stylesheet" href="./Abhishek/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div id="navbar"></div>
     <div id="toptxt">
         <h4>Trending in womenswear</h4>
         <div><img src="https://static.lystit.com/static/n/img/trend-arrows/trend-arrow-rising.9acf608a48a08aeaa8306b1a98bd5ffd.svg" alt="">J Brand Natasha jeans</div>
@@ -151,6 +154,8 @@
             
         </div>
     </div>
+
+    <div id="footer"></div>
 </body>
 </html>
 
@@ -200,4 +205,16 @@ function decCurr(){
 }
 
 
+</script>
+
+
+<script type="module" >
+   
+    import nav from "./componands/navbar.js";
+    document.getElementById('navbar').innerHTML = nav();
+
+    import fot from "./componands/footer.js" ;
+    document.getElementById('footer').innerHTML = fot() ;
+
+   
 </script>
