@@ -106,6 +106,8 @@ function total() {
         totalPrice += data;
         priceTag.innerText = totalPrice;
         priceTag1.innerText = totalPrice
+        // console.log(totalPrice);
+        localStorage.setItem("pay" , totalPrice) ;
     })
 }
 

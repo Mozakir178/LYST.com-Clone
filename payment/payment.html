@@ -12,15 +12,18 @@
     background-color: white;
     font-size: 120%;
     letter-spacing: .03em;
+    width: 80%;
+    margin: auto;
+    padding-left: 100px;
 }
 
 
 form {
     display: grid;
     grid-template-columns: 1;
-    width: 40%;
+    width: 30%;
     gap: 15px;
-    margin : auto ;
+    /* margin : auto ; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 30px;
    
@@ -28,7 +31,7 @@ form {
 
 input,
 select {
-    height: 50px;
+    height: 40px;
     font-size: 20px;
     border: 2px solid rgb(66, 6, 6);
     padding-left: 20px;
@@ -49,9 +52,9 @@ input[type="checkbox"] {
     text-align: justify;
 }
 
-.color-gray {
+.gender {
     margin : auto ;
-    text-align: center;
+    padding-left: 60%;
     margin-top: 40px;
 }
 body>div>p{
@@ -59,7 +62,7 @@ text-align: center;
 }
 .a{
     display:  flex;
-    width: 80%;
+    
     justify-content: space-between;
     margin: auto;
     margin-top: 30px;
@@ -67,12 +70,24 @@ text-align: center;
 
 .a p{
     border: 3px solid black;
-    padding: 5px;
-    background-color: teal;
+    padding: 5px 15px;
+    background-color: rgb(0, 0, 0);
     color: white;
+    
 
 }
+#addr{
+    display: flex;
+    justify-content: space-around;
+}
+#addr>div{
+    padding-top: 13%;
 
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
     </style>
 </head>
 <body>
@@ -84,16 +99,21 @@ text-align: center;
       
 
 
-        <div class="gender color-gray">
+        <div class="gender ">
             <label for="ms"><input type="radio" name="pre"> Ms. *</label>
             <label for="mrs"><input type="radio" name="pre"> Mrs. *</label>
             <label for="mr"><input type="radio" name="pre"> Mr. *</label>
         </div>
         <br>
 
+       <div id="addr">
+        <div>
+            <h1>SHIPPING</h1>
+            <h3>Please enter your details</h3>
+        </div>
         <form>
 
-            <input type="text" placeholder="ENTER YOUR NAME">
+            <input type="text" placeholder="Enter your name">
             <input type="text" placeholder="street *">
             <input type="text" placeholder="house no *">
             <input type="text" placeholder="address line 2">
@@ -105,6 +125,8 @@ text-align: center;
             <input type="number" placeholder="mobile phone *">
             <p>* required text</p>
         </form>
+      
+       </div>
 
        
 
@@ -115,8 +137,8 @@ text-align: center;
         <label for="packing station"> <input type="checkbox">Send to packing station</label>
     </div>
     <div class="a" >
-        <p class="btn-back back">BACK TO SHOPPING BAG</p>
-        <p class="next">PROCEED TO CHECKOUT</p>
+        <p class="btn-back back"><a href="../cart/cart.html">BACK TO CART</a></p>
+        <p class="next"><a href="conform.html">PROCEED TO CHECKOUT</a></p>
     </div>
    
 </body>

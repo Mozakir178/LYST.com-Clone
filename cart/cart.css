@@ -274,3 +274,11 @@ h4 {
     position: absolute;
     right: 18%;
 }
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+#btn2 a{
+    color: #fff;
+}
