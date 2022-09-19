@@ -13,7 +13,7 @@ Tech Stack: JavaScript | HTML | CSS | APIs
 Description: Lyst.com is an E-commerce website that hosts the product of all famous brands. It was a Team collaborative project in which we were 5 team members who worked cooperatively. I was the Team Lead for this project. We have completed the clone of Lyst.com within 1 week. It was great learning.
 
 ### Live link
-![checkout](https://courageous-frangipane-f0775f.netlify.app/)
+[checkout](https://courageous-frangipane-f0775f.netlify.app/)
 
 ### Home Page
 ![](https://github.com/Mozakir178/WebEngers/blob/main/payment/lyst.jpg)
